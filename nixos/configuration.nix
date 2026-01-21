@@ -116,7 +116,7 @@
   time.timeZone = env.tz;
 
   users = {
-    users.ben = {
+    users.nixos = {
       extraGroups = [
         "docker"
         "networkmanager"
