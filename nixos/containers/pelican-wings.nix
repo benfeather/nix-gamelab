@@ -13,12 +13,7 @@
         "TZ" = env.tz;
         "WINGS_UID" = env.puid;
         "WINGS_GID" = env.pgid;
-        "WINGS_USERNAME" = "nixos";
       };
-
-      # environmentFiles = [
-      #   config.sops.secrets."cloudflare".path
-      # ];
 
       ports = [
         "2022:2022"
