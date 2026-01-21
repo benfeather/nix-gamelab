@@ -82,8 +82,8 @@
       enable = true;
       allowedTCPPorts = [
         22 # SSH
+        443 # Pelican Wings
         2022 # Pelican Wings
-        8080 # Pelican Wings
       ];
     };
 
@@ -109,6 +109,18 @@
   nixpkgs = {
     config = {
       allowUnfree = true;
+    };
+  };
+
+  security.acme = {
+    acceptTerms = true;
+    defaults.email = env.email;
+    certs = {
+      "${env.domain}" = {
+        domain = "*.${env.domain}";
+        dnsProvider = "cloudflare";
+        environmentFile = config.sops.secrets."cloudflare".sopsFile;
+      };
     };
   };
 

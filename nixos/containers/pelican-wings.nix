@@ -16,8 +16,8 @@
       };
 
       ports = [
+        "443:443"
         "2022:2022"
-        "8080:8080"
       ];
 
       # networks = [
@@ -29,7 +29,7 @@
         "${env.appdata_dir}/pelican/lib:/var/lib/pelican"
         "${env.appdata_dir}/pelican/log:/var/log/pelican"
         "${env.appdata_dir}/pelican/tmp:/tmp/pelican"
-        "/etc/ssl/certs:/etc/ssl/certs:ro"
+        "/var/lib/acme/${env.domain}:/etc/letsencrypt"
         "/var/lib/docker/containers:/var/lib/docker/containers"
         "/var/run/docker.sock:/var/run/docker.sock"
       ];
