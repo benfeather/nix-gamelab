@@ -1,4 +1,4 @@
-# NixOS HomeLab
+# NixOS GameLab
 
 ## Install
 
@@ -11,6 +11,7 @@ services.openssh.enable = true;
 
 environment.systemPackages = with pkgs; [
 	git
+  nano
 ];
 ```
 
@@ -38,7 +39,7 @@ environment.systemPackages = with pkgs; [
 
 `rm configuration.nix hardware-configuration.nix`
 
-`git clone https://github.com/benfeather/nix-homelab.git /etc/nixos`
+`git clone https://github.com/benfeather/nix-gamelab.git /etc/nixos`
 
 ### Use the new config
 
