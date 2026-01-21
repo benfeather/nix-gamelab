@@ -16,6 +16,9 @@
     ./services/qemu.nix
     ./services/vscode-server.nix
     ./services/xserver.nix
+
+    # Gamelab
+    ./containers/cf-tunnel.nix
   ];
 
   boot = {
@@ -108,7 +111,13 @@
   sops = {
     age.keyFile = "/home/ben/.config/sops/age/keys.txt";
 
-    secrets = { };
+    secrets = {
+      "cloudflare" = {
+        format = "dotenv";
+        sopsFile = ./secrets/cloudflare.env;
+        key = "";
+      };
+    };
   };
 
   system.stateVersion = "25.11";
