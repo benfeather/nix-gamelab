@@ -1,5 +1,5 @@
 keys:
-  - &nixos age1f0fkgkc702yckqfzc6s56rmyp3h2wf3rr5runhmjdru4uuegy5assy7eyk
+  - &nixos age1k3w26266k3a68t4gx8gmsjedt9uj4uhhesdrjs5qqccxuezgjykqndk3ft
 
 creation_rules:
   - path_regex: nixos\/secrets\/.*\.(env|ini|json|yml)$

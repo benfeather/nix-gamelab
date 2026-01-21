@@ -23,9 +23,9 @@
         config.sops.secrets."cloudflare".path
       ];
 
-      networks = [
-        "proxy"
-      ];
+      # networks = [
+      #   "proxy"
+      # ];
     };
   };
 }

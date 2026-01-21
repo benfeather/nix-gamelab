@@ -12,7 +12,7 @@
 
     # Nix Services
     ./services/cron.nix
-    ./services/docker-networks.nix
+    # ./services/docker-networks.nix
     ./services/openssh.nix
     ./services/qemu.nix
     ./services/vscode-server.nix
@@ -110,7 +110,7 @@
   };
 
   sops = {
-    age.keyFile = "/home/ben/.config/sops/age/keys.txt";
+    age.keyFile = "/home/nixos/.config/sops/age/keys.txt";
 
     secrets = {
       "cloudflare" = {
