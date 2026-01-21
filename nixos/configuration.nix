@@ -12,6 +12,7 @@
 
     # Nix Services
     ./services/cron.nix
+    ./services/docker-networks.nix
     ./services/openssh.nix
     ./services/qemu.nix
     ./services/vscode-server.nix
