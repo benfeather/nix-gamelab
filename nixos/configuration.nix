@@ -20,6 +20,7 @@
 
     # Gamelab
     ./containers/cf-tunnel.nix
+    ./containers/pelican-wings.nix
   ];
 
   boot = {
@@ -81,6 +82,8 @@
       enable = true;
       allowedTCPPorts = [
         22 # SSH
+        2022 # Pelican Wings
+        8080 # Pelican Wings
       ];
     };
 
