@@ -9,15 +9,13 @@
     };
 
     script = ''
-      ${pkgs.docker}/bin/docker network inspect backend || \
-      ${pkgs.docker}/bin/docker network create --driver="bridge" backend
-
-      ${pkgs.docker}/bin/docker network inspect proxy || \
-      ${pkgs.docker}/bin/docker network create --driver="bridge" proxy
+      ${pkgs.docker}/bin/docker network inspect tunnel || \
+      ${pkgs.docker}/bin/docker network create --driver="bridge" tunnel
     '';
 
     wantedBy = [
       "docker-cf-tunnel.service"
+      "docker-pelican-wings.service"
     ];
   };
 }

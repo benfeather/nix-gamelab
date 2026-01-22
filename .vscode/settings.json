@@ -3,6 +3,7 @@
     "benfeather",
     "cloudflared",
     "gamelab",
+    "letsencrypt",
     "networkmanager",
     "nixos",
     "nixpkgs",

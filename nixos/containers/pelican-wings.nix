@@ -16,21 +16,22 @@
       };
 
       ports = [
-        "443:443"
         "2022:2022"
+        "8080:8080"
       ];
 
-      # networks = [
-      #   "proxy"
-      # ];
+      networks = [
+        "tunnel"
+        "pelican_nw"
+      ];
 
       volumes = [
-        "${env.appdata_dir}/pelican/etc:/etc/pelican"
-        "${env.appdata_dir}/pelican/lib:/var/lib/pelican"
-        "${env.appdata_dir}/pelican/log:/var/log/pelican"
-        "${env.appdata_dir}/pelican/tmp:/tmp/pelican"
+        "/etc/pelican:/etc/pelican"
+        "/tmp/pelican:/tmp/pelican"
         "/var/lib/acme/${env.domain}:/etc/letsencrypt"
         "/var/lib/docker/containers:/var/lib/docker/containers"
+        "/var/lib/pelican:/var/lib/pelican"
+        "/var/log/pelican:/var/log/pelican"
         "/var/run/docker.sock:/var/run/docker.sock"
       ];
     };

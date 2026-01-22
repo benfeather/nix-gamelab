@@ -12,7 +12,7 @@
 
     # Nix Services
     ./services/cron.nix
-    # ./services/docker-networks.nix
+    ./services/docker-networks.nix
     ./services/openssh.nix
     ./services/qemu.nix
     ./services/vscode-server.nix
@@ -81,9 +81,9 @@
     firewall = {
       enable = true;
       allowedTCPPorts = [
-        22 # SSH
-        443 # Pelican Wings
-        2022 # Pelican Wings
+        22
+        2022
+        8080
       ];
     };
 
